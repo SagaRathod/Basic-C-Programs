@@ -56,11 +56,16 @@ int main()
 
      printf("Enter second number: \n");
      scanf("%d",*(&Number+1));
+      
+     
 
      *(&Number+2) = *(&Number+1);
+     *(&Number+1)  = Number;
+      Number = *(&Number+2);
+
      printf("After Swapping \n");
-     printf("first number:%d",*(&Number+2);
-     printf("Second number:%d",Number);
+     printf("first number:%d",Number);
+     printf("Second number:%d",*(&Number + 1));
      return 0;
 }
      
