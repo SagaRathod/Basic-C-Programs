@@ -22,7 +22,7 @@
 }
  */
 
-
+//2nd way
 #include <stdio.h>
 #include <stdlib.h>   // for atoi, sprintf
 
@@ -44,4 +44,31 @@ int main(int argc, char *argv[]) {
 
     return 0;
 }
+//3rd way
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+     int Number;
+     printf("Enter first number: \n");
+     scanf("%d",&Number);
+
+     printf("Enter second number: \n");
+     scanf("%d",*(&Number+1));
+
+     *(&Number+2) = *(&Number+1);
+     printf("After Swapping \n");
+     printf("first number:%d",*(&Number+2);
+     printf("Second number:%d",Number);
+     return 0;
+}
+     
+
+          
+
+
+
+
+
 
