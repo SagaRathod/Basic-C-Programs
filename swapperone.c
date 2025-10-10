@@ -46,29 +46,25 @@ int main(int argc, char *argv[]) {
 }
 //3rd way
 #include<stdio.h>
-#include<stdlib.h>
-
 int main()
 {
-     int Number;
-     printf("Enter first number: \n");
-     scanf("%d",&Number);
-
-     printf("Enter second number: \n");
-     scanf("%d",*(&Number+1));
-      
-     
-
-     *(&Number+2) = *(&Number+1);
-     *(&Number+1)  = Number;
-      Number = *(&Number+2);
-
-     printf("After Swapping \n");
-     printf("first number:%d",Number);
-     printf("Second number:%d",*(&Number + 1));
-     return 0;
+ 
+	int number;
+ 
+	printf("Enter First Number:");
+	scanf("%d",&number);
+	printf("Enter Second Number:");
+	scanf("%d",&number+1);
+	
+	*(&number+2)   = *(&number+1);
+	*(&number+1)   = number;
+		number    = *(&number+2);
+ 
+	printf("After swapping\n");
+	printf("first:%d \n",number);
+	printf("second:%d \n",*(&number+1));	
+	return 0;
 }
-     
 
           
 
